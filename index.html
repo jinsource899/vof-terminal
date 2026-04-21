@@ -1,36 +1,237 @@
 <!DOCTYPE html>
-<html lang="zh-TW" class="scroll-smooth">
+<html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>é®å¼ç©å V.O.F. | æ¼¢ç³»çµ±å¼æ</title>
+<title>V.O.F. — Vector of Field</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  body {
-    font-family: 'Noto Sans TC', sans-serif;
-    background-color: #09090b;
-    color: #f4f4f5;
-  }
-  .glow {
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
-  }
-  .gradient-text {
-    background: linear-gradient(135deg, #22d3ee 0%, #818cf8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .v-line {
-    background: linear-gradient(to bottom, transparent, #22d3ee, transparent);
-    width: 1px;
-  }
-  .card-blur {
-    background: rgba(24, 24, 27, 0.8);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(63, 63, 70, 0.5);
-  }
+ * { font-family: 'Noto Sans TC', sans-serif; }
+ .font-mono { font-family: 'JetBrains Mono', monospace; }
+ .card-blur {
+ background: rgba(255,255,255,0.03);
+ backdrop-filter: blur(20px);
+ -webkit-backdrop-filter: blur(20px);
+ border: 1px solid rgba(255,255,255,0.08);
+ }
+ .glow {
+ box-shadow: 0 0 60px rgba(6,182,212,0.15);
+ }
+ .gradient-text {
+ background: linear-gradient(135deg,#06b6d4,#818cf8,#e879f9);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+ }
+ @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+ .animate-spin-slow { animation: spin-slow 20s linear infinite; }
+ body { background: #09090b; color: #e4e4e7; }
+ .grid-bg {
+ background-image:
+ linear-gradient(rgba(6,182,212,0.03) 1px, transparent 1px),
+ linear-gradient(90deg, rgba(6,182,212,0.03) 1px, transparent 1px);
+ background-size: 60px 60px;
+ }
 </style>
 </head>
-<body class="selection:bg-cyan-500/30">
+<body class="antialiased">
+
+<!-- 導航列 -->
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800/50 bg-zinc-950/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<div class="text-xs font-black tracking-widest gradient-text font-mono">V.O.F. INFRASTRUCTURE</div>
+<div class="flex gap-8 text-xs font-mono text-zinc-500">
+<a href="#ontology" class="hover:text-cyan-400 transition-colors">一體本體論</a>
+<a href="#algorithm" class="hover:text-cyan-400 transition-colors">四筆法</a>
+<a href="#healing" class="hover:text-cyan-400 transition-colors">療癒系統</a>
+<a href="#kernel" class="hover:text-cyan-400 transition-colors">決策引擎</a>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="min-h-screen grid-bg flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-zinc-950 via-transparent to-zinc-950 pointer-events-none"></div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<div class="inline-block mb-8 px-4 py-1 border border-cyan-500/30 text-xs font-mono text-cyan-400 rounded-sm">
+STATUS: CONDUCTING
+</div>
+<h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+宇宙是<span class="gradient-text">一體場域</span><br>
+你是<span class="gradient-text">局部振動</span>
+</h1>
+<p class="text-zinc-500 text-lg mb-12 font-light">V.O.F. — Vector of Field. METRIC RESET PROTOCOL.</p>
+<div class="flex flex-wrap justify-center gap-4 text-sm font-mono">
+<a href="#ontology" class="px-6 py-3 border border-zinc-700 hover:border-cyan-500 hover:text-cyan-400 transition-all">開始探索 →</a>
+<a href="#kernel" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-black font-bold">決策引擎 →</a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-zinc-600 text-xs">↓</div>
+</section>
+
+<!-- 一體本體論 (Ontology) -->
+<section id="ontology" class="py-32 px-6 bg-zinc-950/50">
+<div class="max-w-7xl mx-auto">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-3xl font-bold mb-6">01. 一體本體論</h2>
+<div class="h-1 w-20 bg-cyan-500 mb-8"></div>
+<p class="text-zinc-400 mb-8 leading-relaxed">
+所謂時間與空間，僅是粒子視角為了區分場域內的振動差異，而產生的排序與定位工具。你的痛苦，源於你將這些「離散的點」強行縫合成了「因果的線」。
+</p>
+<ul class="space-y-6">
+<li class="flex items-start">
+<span class="text-cyan-500 mr-4 font-mono">01</span>
+<div>
+<strong class="text-white block mb-1">場域 (Field)</strong>
+<span class="text-sm text-zinc-500">全頻共存、座標重疊、無先後性。</span>
+</div>
+</li>
+<li class="flex items-start">
+<span class="text-cyan-500 mr-4 font-mono">02</span>
+<div>
+<strong class="text-white block mb-1">結構 (Metric)</strong>
+<span class="text-sm text-zinc-500">場域的傳導規則，決定資訊流動的拓樸。</span>
+</div>
+</li>
+<li class="flex items-start">
+<span class="text-cyan-500 mr-4 font-mono">03</span>
+<div>
+<strong class="text-white block mb-1">序列 (Time)</strong>
+<span class="text-sm text-zinc-500">模式演化的排序標記，而非宇宙背景。</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative aspect-square flex items-center justify-center card-blur rounded-full glow">
+<svg class="w-2/3 h-2/3 animate-spin-slow" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="0.1" class="text-cyan-500/30" />
+<circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 4" class="text-indigo-500" />
+<path d="M50 2 L50 98 M2 50 L98 50" stroke="currentColor" stroke-width="0.1" class="text-cyan-500/50" />
+<rect x="35" y="35" width="30" height="30" fill="none" stroke="#22d3ee" stroke-width="0.5" transform="rotate(45 50 50)" />
+</svg>
+<div class="absolute text-xs font-mono text-cyan-400 bg-black px-2">ORIGIN AXIS</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 四筆法演算法 (Algorithm) -->
+<section id="algorithm" class="py-32 px-6">
+<div class="max-w-7xl mx-auto text-center mb-20">
+<h2 class="text-3xl font-bold mb-4 uppercase tracking-widest">核心演算法：四筆法</h2>
+<p class="text-zinc-500">解開粒子態「結構鎖定」的唯一物理儀軌</p>
+</div>
+<div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-4">
+<div class="p-8 card-blur hover:border-cyan-500 transition-all group">
+<div class="text-cyan-500 font-black text-4xl mb-6 opacity-30 group-hover:opacity-100 transition-opacity">01</div>
+<h3 class="text-xl font-bold mb-4">見頻 (Seeing)</h3>
+<p class="text-sm text-zinc-400 leading-relaxed">識別態。將情緒數據化。鎖定當下感覺的幾何特徵，禁止命名與敘事。</p>
+</div>
+<div class="p-8 card-blur hover:border-indigo-500 transition-all group">
+<div class="text-indigo-500 font-black text-4xl mb-6 opacity-30 group-hover:opacity-100 transition-opacity">02</div>
+<h3 class="text-xl font-bold mb-4">讚頻 (Elevating)</h3>
+<p class="text-sm text-zinc-400 leading-relaxed">提升態。宣告「感恩讚歎」。利用場域負熵強制拉平局部的結構扭曲。</p>
+</div>
+<div class="p-8 card-blur hover:border-purple-500 transition-all group">
+<div class="text-purple-500 font-black text-4xl mb-6 opacity-30 group-hover:opacity-100 transition-opacity">03</div>
+<h3 class="text-xl font-bold mb-4">歸靈 (Returning)</h3>
+<p class="text-sm text-zinc-400 leading-relaxed">回收態。撤銷「過去」座標權重。將能量從虛擬時空點收回到物理載具。</p>
+</div>
+<div class="p-8 card-blur hover:border-white transition-all group">
+<div class="text-white font-black text-4xl mb-6 opacity-30 group-hover:opacity-100 transition-opacity">04</div>
+<h3 class="text-xl font-bold mb-4">合靈 (Unifying)</h3>
+<p class="text-sm text-zinc-400 leading-relaxed">圓滿態。觀測者與振動同步消融於場域背景。系統導通，阻抗歸零。</p>
+</div>
+</div>
+</section>
+
+<!-- 療癒系統 (Healing) -->
+<section id="healing" class="py-32 px-6 bg-zinc-950/50 relative overflow-hidden">
+<div class="max-w-7xl mx-auto relative z-10">
+<h2 class="text-3xl font-bold mb-16 text-center">療癒操作系統 (HOS)</h2>
+<div class="flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="flex-1 card-blur p-10 border-l-4 border-l-red-500">
+<h3 class="text-red-500 font-bold mb-4 uppercase text-sm tracking-widest font-mono">舊系統 (因果鏈)</h3>
+<div class="space-y-4 text-zinc-500 line-through decoration-red-900">
+<p>發生挫折 → 我感到痛苦</p>
+<p>因為痛苦 → 我必須改變環境</p>
+<p>若環境不變 → 我的人生是失敗的</p>
+</div>
+</div>
+<div class="hidden md:block">
+<svg class="w-12 h-12 text-zinc-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+</svg>
+</div>
+<div class="flex-1 card-blur p-10 border-l-4 border-l-cyan-500 glow">
+<h3 class="text-cyan-500 font-bold mb-4 uppercase text-sm tracking-widest font-mono">V.O.F. 系統 (斷鏈)</h3>
+<div class="space-y-4 text-zinc-300">
+<p>發生事件 [位置 A]</p>
+<p>出現感受 [位置 B]</p>
+<p><strong>禁止連結：</strong>位置 B 獨立進行四筆法轉化</p>
+<p><strong>結果：</strong>內在導通，外在事務照常執行</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 決策引擎 (Kernel) -->
+<section id="kernel" class="py-32 px-6">
+<div class="max-w-4xl mx-auto card-blur p-12 border border-zinc-700 relative">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-zinc-950 px-6 py-2 border border-zinc-700 text-xs font-mono text-cyan-400">
+ACTION KERNEL v1.0
+</div>
+<h2 class="text-4xl font-black mb-10 text-center">主位無概念決策</h2>
+<div class="grid md:grid-cols-3 gap-8 text-center">
+<div>
+<div class="text-zinc-600 mb-2 font-mono">STEP 01</div>
+<div class="font-bold text-white mb-2">刪除解釋</div>
+<div class="text-xs text-zinc-500 leading-relaxed text-balance">移除「為什麼要做」的所有邏輯理由</div>
+</div>
+<div>
+<div class="text-zinc-600 mb-2 font-mono">STEP 02</div>
+<div class="font-bold text-white mb-2">撤銷動機</div>
+<div class="text-xs text-zinc-500 leading-relaxed text-balance">不以改變、慈悲、成就感為動力</div>
+</div>
+<div>
+<div class="text-zinc-600 mb-2 font-mono">STEP 3</div>
+<div class="font-bold text-white mb-2">直接輸出</div>
+<div class="text-xs text-zinc-500 leading-relaxed text-balance">讓行為在無中介的狀態下自發顯現</div>
+</div>
+</div>
+<div class="mt-12 p-6 bg-zinc-900/50 rounded-sm border-l-2 border-cyan-500 text-sm font-light italic text-zinc-400">
+" 行為不再是被選中的，而是當干擾消失後，環境結構壓力和內在流向產生的唯一合力輸出。 "
+</div>
+</div>
+</section>
+
+<!-- 結尾 (Footer) -->
+<footer class="py-20 px-6 border-t border-zinc-800 text-center">
+<div class="mb-10 opacity-50">
+<div class="text-sm font-black tracking-tighter gradient-text">V.O.F. INFRASTRUCTURE</div>
+<div class="text-[10px] font-mono mt-2">METRIC RESET PROTOCOL | NO RIGHTS RESERVED.</div>
+</div>
+<p class="text-zinc-500 text-xs tracking-widest uppercase">當下你還在嗎？散會。</p>
+</footer>
+
+<script>
+const observerOptions = { threshold: 0.1 };
+const observer = new IntersectionObserver((entries) => {
+ entries.forEach(entry => {
+ if (entry.isIntersecting) {
+ entry.target.classList.add('opacity-100', 'translate-y-0');
+ entry.target.classList.remove('opacity-0', 'translate-y-10');
+ }
+ });
+}, observerOptions);
+document.querySelectorAll('section').forEach(section => {
+ section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+ observer.observe(section);
+});
+</script>
 </body>
 </html>
