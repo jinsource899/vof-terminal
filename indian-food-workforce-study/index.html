@@ -13,8 +13,9 @@
     .metrics{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}.metric{min-height:170px;padding:28px;border-right:1px solid var(--line)}.metric:last-child{border:0}.metric small{font-size:11px;font-weight:800}.metric strong{display:block;margin-top:38px;color:var(--green);font:500 52px Georgia,serif}
     section{padding:90px 0}.heading{display:grid;grid-template-columns:1fr 1fr;gap:50px;padding-bottom:34px;border-bottom:1px solid var(--line)}h2{margin:10px 0 0;font:500 clamp(40px,5vw,68px) Georgia,"Noto Serif TC",serif;letter-spacing:-.04em}.heading p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}.cards{display:grid;grid-template-columns:1fr 1fr;margin-top:40px;border:1px solid var(--line)}.card{min-height:300px;padding:32px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.card:nth-child(2n){border-right:0}.card h3{font:500 28px Georgia,"Noto Serif TC",serif}.card p,.row p{color:var(--muted);font-size:13px;line-height:1.75}.source{display:inline-block;margin-top:16px;font-size:12px;font-weight:800}
     .directory{border-top:1px solid var(--line);margin-top:42px}.row{display:grid;grid-template-columns:1.25fr .8fr .8fr 1.2fr;gap:28px;padding:28px 0;border-bottom:1px solid var(--line)}.row h3{margin:8px 0;font:500 23px Georgia,"Noto Serif TC",serif}.row strong{display:block;margin-top:8px;font-size:14px}.notice{margin-top:45px;padding:24px;background:var(--green);color:#fff}.notice p{margin:6px 0 0;color:rgba(255,255,255,.7);font-size:13px;line-height:1.7}
+    .poster{display:grid;grid-template-columns:.75fr 1.25fr;gap:54px;align-items:center;padding-top:30px}.poster img{display:block;width:min(420px,100%);margin:auto;box-shadow:0 24px 70px rgba(23,35,29,.18)}.poster-copy p{color:var(--muted);font-size:14px;line-height:1.8}.poster-copy .button{margin-right:10px}
     footer{padding:38px 0;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
-    @media(max-width:800px){.metrics,.heading,.cards,.row{grid-template-columns:1fr}.metric,.card{border-right:0}.metric{border-bottom:1px solid var(--line)}header,section{padding:65px 0}.row{gap:16px}h1{font-size:50px}}
+    @media(max-width:800px){.metrics,.heading,.cards,.row,.poster{grid-template-columns:1fr}.metric,.card{border-right:0}.metric{border-bottom:1px solid var(--line)}header,section{padding:65px 0}.row{gap:16px}h1{font-size:50px}}
   </style>
 </head>
 <body>
@@ -49,6 +50,10 @@
     </div>
     <div class="notice"><strong>研究限制</strong><p>這是探索性人口研究。公開名稱不等於指控或認證；群眾資料需要來源並標示是否經獨立審計。</p></div>
     <div class="notice"><strong>公開調查已開放</strong><p>只提交工廠層級的群體統計，不填姓名或個資；每筆資料都要附公開來源。</p><a class="button" style="background:#c9f464;color:#17231d" href="https://indian-food-workforce-study.jinsource.chatgpt.site/?survey=1">直接填報 ↗</a></div>
+  </section>
+  <section class="wrap poster" id="share">
+    <img src="promo-research-v1.jpg" alt="全球食品工廠印度籍勞動者調查宣傳圖" width="941" height="1672">
+    <div class="poster-copy"><span class="label">03 / SHARE THE STUDY</span><h2>分享這項公開研究</h2><p>把調查連結與宣傳圖分享給食品工廠員工、工會、研究者與移民社群，協助補足仍然缺少的工廠級資料。</p><a class="button" href="promo-research-v1.jpg" download>下載宣傳圖 ↓</a><a class="button" href="https://indian-food-workforce-study.jinsource.chatgpt.site/?survey=1">開啟調查表 ↗</a></div>
   </section>
   <footer><div class="wrap">India Workforce Atlas · 獨立人口研究計畫 · 不代表任何政府、企業或移民機構</div></footer>
 </body>
